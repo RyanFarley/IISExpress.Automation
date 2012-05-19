@@ -7,12 +7,12 @@ namespace IISExpress.Automation
     {
         private readonly ProcessEnvelope process;
 
-        public IISExpress(int port, string path)
+        public IISExpress(Parameters parameters)
         {
             var info = new ProcessStartInfo
                            {
                                FileName = @"c:\Program Files (x86)\IIS Express\iisexpress.exe",
-                               Arguments = string.Format("/port:{0} /path:{1}", port, path)
+                               Arguments = parameters == null ? "" : parameters.ToString()
                            };
 
             process = new ProcessEnvelope(Process.Start(info));

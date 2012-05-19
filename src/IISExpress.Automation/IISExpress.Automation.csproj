@@ -8,7 +8,7 @@
     <ProjectGuid>{99DA7529-2CB6-4F46-BC49-964B3D6F2E5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IISExpress.Automation</RootNamespace>
+    <RootNamespace>IISExpressAutomation</RootNamespace>
     <AssemblyName>IISExpress.Automation</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

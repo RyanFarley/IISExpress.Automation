@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 
-namespace IISExpress.Automation
+namespace IISExpressAutomation
 {
     public enum TraceLevel
     {

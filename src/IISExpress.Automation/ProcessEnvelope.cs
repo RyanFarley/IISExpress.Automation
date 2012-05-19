@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace IISExpress.Automation
+namespace IISExpressAutomation
 {
     internal class ProcessEnvelope
     {

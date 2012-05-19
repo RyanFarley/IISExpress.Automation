@@ -4,7 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using SharpTestsEx;
 
-namespace IISExpress.Automation.Tests
+namespace IISExpressAutomation.Tests
 {
     [TestFixture]
     public class ParametersTests

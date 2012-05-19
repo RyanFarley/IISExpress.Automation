@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace IISExpress.Automation
+namespace IISExpressAutomation
 {
     public class IISExpress : IDisposable
     {

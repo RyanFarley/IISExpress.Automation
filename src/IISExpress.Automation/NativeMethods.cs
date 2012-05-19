@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace IISExpress.Automation
+namespace IISExpressAutomation
 {
     internal class NativeMethods
     {

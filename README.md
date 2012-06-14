@@ -15,10 +15,8 @@ First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). 
 Basic Sample
 --------------------------------
 
-
     using System;
     using IISExpressAutomation;
-
 
     namespace Automation.Demo
     {
@@ -26,7 +24,6 @@ Basic Sample
         {
             static void Main()
             {
-
                 using (var iis = new IISExpress(new Parameters {
                     Path = @"c:\git\MyWebSite",
                     Port = 8080
@@ -35,8 +32,23 @@ Basic Sample
                     Console.WriteLine("Pressione qq tecla para fechar.");
                     Console.ReadLine();
                 }
-
             }
         }
     }
+	
+Shipping IIS Express with your application and custom path
+----------------------------------------------------------
+	
+By default, IISExpress.Automation will look for the IIS Express executable in "C:\Program Files (x86)\IIS Express\iisexpress.exe".
 
+In case you have it somewhere else or want to ship it with your application you can provide the executable path as an optional parameter in the constructor.
+
+	using (var iis = new IISExpress(new Parameters {
+		Path = @"c:\git\MyWebSite",
+		Port = 8080
+		}),
+		"C:\myCustomPath\iisexpress.exe")
+	{
+		Console.WriteLine("Pressione qq tecla para fechar.");
+		Console.ReadLine();
+	}

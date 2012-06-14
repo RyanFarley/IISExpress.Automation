@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace IISExpressAutomation
 {
     public class IISExpress : IDisposable
     {
-        private readonly ProcessEnvelope process;
+        private readonly ProcessEnvelope process;        
 
-        public IISExpress(Parameters parameters)
+        public IISExpress(Parameters parameters, string IISExpressPath = @"C:\Program Files (x86)\IIS Express\iisexpress.exe")
         {
+            if (!File.Exists(IISExpressPath))
+            {
+                throw new ArgumentException("IIS Express executable not found", IISExpressPath);
+            }
+            
             var info = new ProcessStartInfo
                            {
-                               FileName = @"c:\Program Files (x86)\IIS Express\iisexpress.exe",
+                               FileName = IISExpressPath,
                                Arguments = parameters == null ? "" : parameters.ToString()
                            };
 
